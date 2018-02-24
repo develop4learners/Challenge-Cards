@@ -13,11 +13,20 @@ def draw_line( x0, y0, x1, y1, screen, color ):
     a = y1 - y0
     b = x0 - x1
 
+    if (b == 0):
+        if (y < y1):
+            while(y <= y1):
+                plot(screen, color, x, y)
+                y = y + 1
+        if (y > y1):
+            while(y1 <= y):
+                plot(screen, color, x, y)
+                y = y - 1
+        return
+
     #slope 
-    if (x1 - x0) != 0:
-        m = float(a)/float(-1 * b)
-    else: 
-        m = 0
+    m = float(a)/float(-1 * b)
+ 
 
     #OCTANT 1
     if m >= 0 and m <= 1: 
