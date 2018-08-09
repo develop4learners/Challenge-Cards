@@ -1,3 +1,6 @@
+from displays import OledScreen
+oled = OledScreen(6)
+
 def drawLine(x0, y0, x1, y1):
 
     #swap
