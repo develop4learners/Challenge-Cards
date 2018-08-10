@@ -5,10 +5,10 @@ oled = OledScreen(6)
 
 def drawLine(point1, point2):
 
-    x1 = point1[0]
-    y1 = point1[1]
-    x2 = point2[0]
-    y2 = point2[1]
+    x0 = point1[0]
+    y0 = point1[1]
+    x1 = point2[0]
+    y1 = point2[1]
     #swap
     if x1 < x0:
         drawLine(x1, y1, x0, y0)
