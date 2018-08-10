@@ -1,8 +1,14 @@
 from displays import OledScreen
 oled = OledScreen(6)
 
-def drawLine(x0, y0, x1, y1):
+#def drawLine(x0, y0, x1, y1):
 
+def drawLine(point1, point2):
+
+    x1 = point1[0]
+    y1 = point1[1]
+    x2 = point2[0]
+    y2 = point2[1]
     #swap
     if x1 < x0:
         drawLine(x1, y1, x0, y0)
@@ -69,4 +75,4 @@ def drawLine(x0, y0, x1, y1):
             d += 2 * a
     oled.show()
 
-drawLine(3, 100, 100, 10)
+drawLine([3, 100], [100, 10])
